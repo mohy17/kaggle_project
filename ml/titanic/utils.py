@@ -103,7 +103,7 @@ X_train_full = pipeline.fit_transform(X_train)
 X_test_full = pipeline.transform(X_test)
 
 
-bagging_model = RandomForestClassifier(bootstrap=False, max_depth=8, n_estimators=100, random_state=44)
+bagging_model = RandomForestClassifier(bootstrap=True, max_depth=8, n_estimators=100, random_state=44)
 bagging_model.fit(X_train_full, y_train)
 
 # Evaluate the model
